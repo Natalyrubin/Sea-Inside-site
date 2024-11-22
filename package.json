@@ -1,0 +1,17 @@
+{
+  "name": "sea-inside-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npm run build"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

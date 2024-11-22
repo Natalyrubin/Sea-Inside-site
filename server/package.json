@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "start:atlas": "cross-env NODE_ENV=atlas node server.js"
   },
   "author": "",
   "license": "ISC",
