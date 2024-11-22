@@ -1,0 +1,107 @@
+@media (min-width: 768px) {
+    .IconSection {
+        position: relative;
+        margin-top: -100px;
+        /* כדי לעלות מעל הסקשן שמעליו */
+        width: 100%;
+        background-image: url("/public/assets/img/waveBg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 40px 20px;
+        /* רווח פנימי גדול יותר */
+        background-position: center top;
+        z-index: 2;
+    }
+
+    .icon-container {
+        display: flex;
+        justify-content: space-evenly;
+        /* ריווח זהה בין האייקונים */
+        align-items: center;
+        flex-wrap: nowrap;
+        /* אייקונים בשורה אחת */
+        margin: 0 auto;
+        padding-top: 40px;
+        color: black;
+    }
+
+    .icon-item {
+        text-align: center;
+        margin: 0 10px;
+        /* ריווח אופקי בין האייקונים */
+        padding: 10px;
+        width: 15%;
+        /* רוחב אחיד */
+    }
+
+    .icon-image {
+        width: 80px;
+        /* גודל אחיד */
+        height: 80px;
+        object-fit: contain;
+        /* שמירה על פרופורציות */
+        margin-bottom: 10px;
+        /* רווח בין האייקון לטקסט */
+    }
+
+    .icon-title {
+        font-size: 1rem;
+        font-weight: normal;
+        margin: 0;
+        padding: 0 5px;
+        /* מגבלה של 5 פיקסלים מימין ומשמאל */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .IconSection {
+        position: relative;
+        margin-top: 0;
+        /* צמוד לסקשן שמעליו */
+        background-color: white;
+        /* רקע לבן */
+        padding: 20px;
+        /* רווח פנימי */
+    }
+
+    .icon-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* שתי שורות ושני עמודות */
+        justify-content: center;
+        /* יישור למרכז */
+        gap: 15px;
+        /* רווח בין האייקונים */
+        text-align: center;
+    }
+
+    .icon-item {
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        width: 90%;
+        /* התאמת רוחב */
+
+    }
+
+    .icon-image {
+        width: 60px;
+        /* גודל מוקטן */
+        height: 60px;
+        object-fit: contain;
+        /* שמירה על פרופורציות */
+        margin-bottom: 10px;
+        /* רווח בין האייקון לטקסט */
+    }
+
+    .icon-title {
+        font-size: 0.9rem;
+        font-weight: normal;
+        margin: 0;
+        padding: 0 5px;
+        color: black;
+        /* מגבלה של 5 פיקסלים מימין ומשמאל */
+    }
+}

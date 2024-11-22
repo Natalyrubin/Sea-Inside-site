@@ -1,0 +1,25 @@
+.Footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-text p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links p {
+    font-size: 14px;
+    color: #ddd;
+}

@@ -1,0 +1,30 @@
+.UpcomingDate {
+    background-color: #ffffff;
+    color: #000000;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    margin: 0;
+    /* מבטל רווחים חיצוניים */
+}
+
+.UpcomingDate h2 {
+    font-size: 2rem;
+    text-align: center;
+    /* ממורכז */
+    margin: 0;
+    /* מבטל רווח חיצוני */
+    padding-top: 10px;
+    /* רווח פנימי קטן אם נדרש */
+}
+
+.UpcomingDate p {
+    font-size: 1rem;
+    text-align: center;
+    /* יישור לשני הצדדים */
+    margin: 0;
+    /* מבטל רווח חיצוני */
+    padding-bottom: 10px;
+    padding-top: 10px;
+    /* רווח פנימי קטן אם נדרש */
+}

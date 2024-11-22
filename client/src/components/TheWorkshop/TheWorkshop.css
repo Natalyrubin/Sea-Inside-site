@@ -1,0 +1,76 @@
+.TheWorkshop {
+    position: relative;
+    background-image: url("/public/assets/img/surfing2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    /* צבע הטקסט */
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 40px;
+    /* ריווח צדדי בדסקטופ */
+    text-align: right;
+    /* מיושר לימין בדסקטופ */
+    line-height: 1.8;
+    overflow: hidden;
+}
+
+.TheWorkshop::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* שכבה שחורה עם שקיפות */
+    z-index: 1;
+    /* שכבת רקע */
+}
+
+.TheWorkshop h2,
+.TheWorkshop h3,
+.TheWorkshop p,
+.TheWorkshop ul {
+    position: relative;
+    z-index: 2;
+    /* מבטיח שהטקסט מעל שכבת הרקע */
+}
+
+.TheWorkshop h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.TheWorkshop p,
+.TheWorkshop ul {
+    margin-bottom: 1rem;
+}
+
+.TheWorkshop ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.TheWorkshop ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* התאמות למובייל */
+@media (max-width: 768px) {
+    .TheWorkshop {
+        padding-right: 13px;
+        padding-left: 13px;
+        /* ריווח צדדי במובייל */
+        text-align: justify;
+        /* יישור לצדדים */
+        background-size: cover;
+        /* תמונה נחתכת לפי הרזולוציה */
+    }
+
+    .TheWorkshop h2 {
+        font-size: 1.8rem;
+    }
+}

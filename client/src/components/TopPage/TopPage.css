@@ -1,0 +1,87 @@
+.TopPage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/public/assets/img/surfing.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .TopPage {
+        background-image: url("/public/assets/img/surfingMobile.jpg");
+    }
+
+    .TopPage-title {
+        font-size: 2.5rem;
+        padding-top: 20%;
+    }
+
+    span {
+        font-size: 1rem;
+        margin-top: 10px;
+        font-weight: normal;
+    }
+}
+
+@media (min-width: 768px) {
+    .TopPage-title {
+        font-size: 5rem;
+        padding-top: 13%;
+    }
+
+    span {
+        font-size: 2rem;
+        margin-top: 10px;
+        font-weight: normal;
+    }
+}
+
+.TopPage-title {
+    display: block;
+    margin: auto;
+    /* position: absolute; */
+    /* top: 10%;
+    left: 50%; */
+    /*  transform: translateX(-50%); */
+
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    z-index: 1;
+}
+
+/* span {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: normal;
+} */
+
+.floating-icon {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: float 2s infinite ease-in-out;
+    z-index: 1;
+}
+
+.floating-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}

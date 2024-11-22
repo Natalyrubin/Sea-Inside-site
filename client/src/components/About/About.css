@@ -1,0 +1,115 @@
+/* רקע סטטי */
+.StaticBackground {
+    background-image: url("/public/assets/img/cover-photo.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 400px;
+    /* Adjust as needed */
+    width: 100%;
+}
+
+/* סקשן אודות */
+.About {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+}
+
+.AboutHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.AboutHeader h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.AboutHeader p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.AboutContent {
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+/* עמודות */
+.AboutColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* תמונה עגולה */
+.ImageWrapper img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* טקסט */
+.TextWrapper {
+    width: 90%;
+    /* מקסימום רוחב */
+    text-align: justify;
+    /* יישור */
+    /* max-height: 300px; */
+    overflow: hidden;
+    position: relative;
+}
+
+.TextWrapper p {
+    line-height: 1.6;
+}
+
+.ReadMore {
+    display: block;
+    color: #0073e6;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .AboutContent {
+        flex-direction: column;
+        /* סידור טורים אחד מתחת לשני */
+        gap: 20px;
+        /* ריווח בין הטורים */
+    }
+
+    .AboutHeader h2 {
+        text-align: center;
+        /* כותרת ממורכזת */
+    }
+
+    .AboutColumn {
+        align-items: center;
+        /* יישור לאמצע */
+        text-align: justify;
+        /* טקסט מיושר בשני הצדדים */
+        padding: 10px;
+        /* ריווח פנימי */
+    }
+
+    .ImageWrapper img {
+        margin: 0 auto;
+        /* תמונה ממורכזת */
+    }
+
+    .TextWrapper {
+        width: 100%;
+        /* טקסט מלא רוחב */
+        padding: 10px;
+        /* ריווח מהצדדים */
+    }
+}

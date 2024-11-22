@@ -1,0 +1,87 @@
+.ContentOne {
+    background-image: url("/public/assets/img/cover-photo.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ContentWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 5%;
+}
+
+.TextContainer {
+    flex: 1;
+    padding: 20px;
+    text-align: right;
+    color: white;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 5);
+}
+
+.TextContainer h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.TextContainer p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    line-height: 1.6;
+
+}
+
+.ImageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 0;
+}
+
+.ImageContainer img {
+    width: 70%;
+    height: auto;
+    /* max-height: 300px; */
+    object-fit: contain;
+    margin-bottom: 0px;
+    animation: moveSideToSide 2s infinite alternate ease-in-out;
+}
+
+@keyframes moveSideToSide {
+    0% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ContentWrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .TextContainer {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .ImageContainer {
+        display: none;
+        /* מסתיר את התמונה במובייל */
+    }
+}
