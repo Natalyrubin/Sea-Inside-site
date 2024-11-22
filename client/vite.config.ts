@@ -1,15 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  root: 'client',  // אם תיקיית ה-root היא client
+  root: 'client',  // הוספת הגדרה זו מציינת ש-Vite ימצא את index.html בתיקיית ה-client
   build: {
-    rollupOptions: {
-      input: 'client/index.html',  // הגדרת נתיב לקובץ index.html
-    },
+    outDir: '../dist',  // אם תרצה לשמור את הקבצים בתיקיית dist בשורש הפרויקט
   },
 })
-
-
