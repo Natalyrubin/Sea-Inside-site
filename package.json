@@ -1,11 +1,16 @@
 {
   "name": "sea-inside-site",
   "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "build": "cd client && npm run build && cd ../server && npm install && node server.js"
+    "build": "cd server && npm install && npm run build && cd ../client && npm install && npm run build"
   },
   "dependencies": {
     "express": "^4.17.1",
