@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const mode = process.env.NODE_ENV;
+const mode = process.env.NODE_ENV || 'development';
 
 let uri;
 if (mode === 'prod') {
