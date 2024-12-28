@@ -54,7 +54,7 @@ app.use('/api/leads', require('./routes/leadsRoutes'));
 
 
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 443;
 
 // Connect to MongoDB and start server
 connectDB().then(() => {
