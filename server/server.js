@@ -53,6 +53,4 @@ connectDB(mongoURI).then(() => {
 });
 
 
-
-
 module.exports = app;
