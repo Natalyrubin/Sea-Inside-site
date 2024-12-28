@@ -31,6 +31,17 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 
+// קונפיגורציה ל-CORS
+const corsOptions = {
+    origin: 'https://www.sea-inside.co.il', // הגדרת מקור מותר (הכתובת של האתר שלך)
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // הגדרת שיטות מותרות
+    credentials: true, // אם יש צורך ב-Cookies, ניתן להוסיף
+};
+
+// הוספת ה-CORS לאפליקציה
+app.use(cors(corsOptions));
+
+
 
 // Connect to MongoDB
 const environment = process.env.NODE_ENV || 'development';
