@@ -8,8 +8,25 @@ const cors = require('cors');
 // Initialize express
 const app = express();
 
+
+// Enable CORS
+app.use(cors({
+    origin: 'https://www.sea-inside.co.il', // דומיין מותר
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // מתודות מותרות
+    allowedHeaders: ['Content-Type', 'Authorization'], // כותרות מותרות
+}));
+
+// Custom Middleware for OPTIONS Requests
+app.options('*', (req, res) => {
+    res.set('Access-Control-Allow-Origin', 'https://www.sea-inside.co.il');
+    res.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.sendStatus(200); // Return 200 for OPTIONS
+});
+
+
 // Middlewares
-app.use(cors());
+/* app.use(cors()); */
 app.use(express.json());
 app.use(morgan('dev'));
 
