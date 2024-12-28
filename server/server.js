@@ -32,36 +32,27 @@ app.use(morgan('dev'));
 
 
 
-// Custom CORS Middleware
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://www.sea-inside.co.il"); // החלף בדומיין המותר
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS"); // אפשר שיטות ספציפיות
-    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization"); // אפשר כותרות
-    if (req.method === "OPTIONS") {
-        return res.status(200).end(); // תגובה לבקשת OPTIONS
-    }
-    next();
-});
+// Connect to MongoDB
+const environment = process.env.NODE_ENV || 'development';
+const mongoURI =
+    environment === 'production'
+        ? process.env.MONGODB_URI_PROD
+        : process.env.MONGODB_URI_DEV;
 
+connectDB(mongoURI).then(() => {
+    console.log(`[v] Connected to MongoDB (${environment} environment)`);
 
+    // Routes
+    app.use('/api/leads', require('./routes/leadsRoutes'));
 
-
-
-
-
-// Routes
-app.use('/api/leads', require('./routes/leadsRoutes'));
-
-
-
-const PORT = process.env.PORT || 443;
-
-// Connect to MongoDB and start server
-connectDB().then(() => {
+    // Start server
+    const PORT = process.env.PORT || 443;
     app.listen(PORT, () =>
         console.log(`Server is running at ${process.env.BASE_URL}:${PORT}`)
     );
 });
+
+
 
 
 module.exports = app;
