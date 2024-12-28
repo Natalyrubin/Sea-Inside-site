@@ -40,7 +40,7 @@ export default function Header() {
             <img
               decoding="async"
               id="logo"
-              src={("/public/assets/img/logoBlueNew.png")}
+              src={("/assets/img/logoBlueNew.png")}
               alt="Company Logo"
             />
           </a>
@@ -59,10 +59,10 @@ export default function Header() {
           <div className="menu-divider"></div>
           <div className="social-icons">
             <a href="https://www.facebook.com/RubinSuccess" target="_blank" rel="noopener noreferrer">
-              <img decoding="async" src="/public/assets/img/facebook.png" alt="facebook Logo" />
+              <img decoding="async" src="/assets/img/facebook.png" alt="facebook Logo" />
             </a>
             <a href="https://www.instagram.com/nataly_rubin_/" target="_blank" rel="noopener noreferrer">
-              <img decoding="async" src="/public/assets/img/insta.png" alt="Instagram Logo" />
+              <img decoding="async" src="/assets/img/insta.png" alt="Instagram Logo" />
             </a>
           </div>
         </div>
