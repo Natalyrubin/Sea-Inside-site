@@ -13,7 +13,7 @@ export default function ContentOne() {
           </p>
         </div>
         <div className="ImageContainer">
-          <img src="/public/assets/img/brain.png" alt="מוח האדם" />
+          <img src="/assets/img/brain.png" alt="מוח האדם" />
         </div>
       </div>
     </div>

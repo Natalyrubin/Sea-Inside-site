@@ -22,7 +22,7 @@ export default function About() {
         {/* עמודה ימנית */}
         <div className="AboutColumn">
           <div className="ImageWrapper">
-            <img src="/public/assets/img/nataly.png" alt="נטלי רובין" />
+            <img src="/assets/img/nataly.png" alt="נטלי רובין" />
           </div>
           <div className="TextWrapper">
 
@@ -48,7 +48,7 @@ export default function About() {
         {/* עמודה שמאלית */}
         <div className="AboutColumn">
           <div className="ImageWrapper">
-            <img src="/public/assets/img/debby.png" alt="דבי צוברי" />
+            <img src="/assets/img/debby.png" alt="דבי צוברי" />
           </div>
           <div className="TextWrapper">
             <p>

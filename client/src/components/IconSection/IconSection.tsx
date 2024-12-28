@@ -2,10 +2,10 @@ import "./IconSection.css";
 
 export default function IconSection() {
   const icons = [
-    { src: "/public/assets/img/mental-strength.png", title: "לאמן את הגוף והמיינד לגמישות" },
-    { src: "/public/assets/img/girl-power.png", title: "חיזוק תחושת היכולת העצמית" },
-    { src: "/public/assets/img/ayurveda.png", title: "העצמת חוסן מנטלי והרחבת גבולות הנוחות" },
-    { src: "/public/assets/img/yoga.png", title: "הפחתת סטרס ושימור הבריאות הפיזית והמנטלית" },
+    { src: "/assets/img/mental-strength.png", title: "לאמן את הגוף והמיינד לגמישות" },
+    { src: "/assets/img/girl-power.png", title: "חיזוק תחושת היכולת העצמית" },
+    { src: "/assets/img/ayurveda.png", title: "העצמת חוסן מנטלי והרחבת גבולות הנוחות" },
+    { src: "/assets/img/yoga.png", title: "הפחתת סטרס ושימור הבריאות הפיזית והמנטלית" },
   ];
 
   return (

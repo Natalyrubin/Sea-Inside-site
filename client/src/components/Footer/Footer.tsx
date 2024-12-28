@@ -12,7 +12,7 @@ export default function Footer() {
               decoding="async"
               width="52"
               height="52"
-              src={("../../../public/assets/img/facebook.png")}
+              src={("/assets/img/facebook.png")}
               alt="facebook Logo"
             />
           </a>
@@ -23,7 +23,7 @@ export default function Footer() {
               decoding="async"
               width="50"
               height="50"
-              src={("../../../public/assets/img/insta.png")}
+              src={("/assets/img/insta.png")}
               alt="facebook Logo"
             />
           </a>

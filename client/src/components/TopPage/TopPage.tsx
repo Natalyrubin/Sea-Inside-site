@@ -10,7 +10,7 @@ export default function TopPage() {
         </span>
       </h1>
       <div className="floating-icon">
-        <img src="/public/assets/img/surf.png" alt="Floating Icon" />
+        <img src="/assets/img/surf.png" alt="Floating Icon" />
       </div>
     </div>
   );
