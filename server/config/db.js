@@ -15,6 +15,10 @@ if (mode === 'prod') {
     console.log('Running in development mode');
 }
 
+console.log('Environment Mode:', mode); // בדקי איזה מצב מוגדר
+console.log('MongoDB URI:', uri);       // הדפיסי את ה-URI שנבחר
+
+
 const connectDB = async () => {
     try {
         await mongoose.connect(uri);
