@@ -2,7 +2,7 @@ import "./FloatingWhatsApp.css";
 
 export default function FloatingWhatsApp() {
   const phoneNumber = "+972527483010"; // הכנס כאן את מספר ה-WhatsApp שלך
-  const message = encodeURIComponent("היי :) אשמח לשמוע פרטים");
+  const message = encodeURIComponent("היי :) אשמח לשמוע פרטים על סדנת Sea-Inside");
 
   return (
     <a
