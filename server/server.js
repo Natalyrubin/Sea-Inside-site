@@ -15,15 +15,12 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 
+
 app.use(cors({
-    origin: 'https://www.sea-inside.co.il', // מקור מורשה
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // שיטות מותרות
-    allowedHeaders: ['Content-Type', 'Authorization'], // כותרות מותרות
-    credentials: true, // אם יש צורך בקוקיז
+    origin: ['https://www.sea-inside.co.il', 'https://sea-inside.co.il'],
+    methods: ['GET', 'POST', 'PUT'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }));
-
-app.options('*', cors()); // טיפול בבקשות OPTIONS
-
 
 
 
