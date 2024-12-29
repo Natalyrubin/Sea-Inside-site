@@ -17,7 +17,7 @@ app.use(morgan('dev'));
 
 
 app.use(cors({
-    origin: ['https://www.sea-inside.co.il', 'https://sea-inside.co.il'],
+    origin: ['https://www.sea-inside.co.il', 'https://sea-inside.co.il', 'https://sea-inside.co.il/api/leads'],
     methods: ['GET', 'POST', 'PUT'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
