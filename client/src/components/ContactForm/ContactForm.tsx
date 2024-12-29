@@ -37,9 +37,12 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       });
 
+      const data = await response.json();
+      console.log(data); // הדפס את התגובה מהשרת
       if (!response.ok) {
         throw new Error("Failed to submit form");
       }
+
 
       setIsSubmitted(true);
     } catch (error) {
