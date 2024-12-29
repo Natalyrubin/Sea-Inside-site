@@ -8,22 +8,21 @@ const cors = require('cors');
 // Initialize express
 const app = express();
 
-
-
 // Middlewares
 app.use(express.json());
 app.use(morgan('dev'));
 
-
-
-app.use(cors({
-    origin: ['https://www.sea-inside.co.il', 'https://sea-inside.co.il', 'https://sea-inside.co.il/api/leads'],
-    methods: ['GET', 'POST', 'PUT'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-}));
-
-
-
+app.use(
+    cors({
+        origin: [
+            'https://www.sea-inside.co.il',
+            'https://sea-inside.co.il',
+            'https://sea-inside.co.il/api/leads',
+        ],
+        methods: ['GET', 'POST', 'PUT'],
+        allowedHeaders: ['Content-Type', 'Authorization'],
+    })
+);
 
 // Connect to MongoDB
 const environment = process.env.NODE_ENV || 'development';
@@ -32,18 +31,29 @@ const mongoURI =
         ? process.env.MONGODB_URI_PROD
         : process.env.MONGODB_URI_DEV;
 
-connectDB(mongoURI).then(() => {
-    console.log(`[v] Connected to MongoDB (${environment} environment)`);
+if (!mongoURI) {
+    console.error('MongoDB URI is not defined. Check your environment variables.');
+    process.exit(1); // Exit the process with an error code
+}
 
-    // Routes
-    app.use('/api/leads', require('./routes/leadsRoutes'));
+connectDB(mongoURI)
+    .then(() => {
+        console.log(`[v] Connected to MongoDB (${environment} environment)`);
 
-    // Start server
-    const PORT = process.env.PORT || 443;
-    app.listen(PORT, () =>
-        console.log(`Server is running at ${process.env.BASE_URL}:${PORT}`)
-    );
-});
+        // Routes
+        app.use('/api/leads', require('./routes/leadsRoutes'));
 
+        // Start server
+        const PORT = process.env.PORT || 3000;
+        app.listen(PORT, () =>
+            console.log(`Server is running at ${process.env.BASE_URL || ''}:${PORT}`)
+        );
+    })
+    .catch((error) => {
+        console.error('Error connecting to MongoDB:', error.message);
+        process.exit(1); // Exit the process with an error code
+    });
+
+console.log('MongoDB URI:', mongoURI);
 
 module.exports = app;
