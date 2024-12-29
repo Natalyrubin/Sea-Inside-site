@@ -17,12 +17,15 @@ app.use(
         origin: [
             'https://www.sea-inside.co.il',
             'https://sea-inside.co.il',
-            'http://localhost:3000', // הוספת localhost במקרה של סביבה מקומית
+            'https://sea-inside.co.il/api/leads',
         ],
         methods: ['GET', 'POST', 'PUT'],
         allowedHeaders: ['Content-Type', 'Authorization'],
     })
 );
+
+// Routes
+app.use('/api/leads', require('./routes/leadsRoutes'));
 
 
 // Connect to MongoDB
@@ -37,17 +40,16 @@ if (!mongoURI) {
     process.exit(1); // Exit the process with an error code
 }
 
+// Start server
+const PORT = process.env;
+
+
 connectDB(mongoURI)
     .then(() => {
         console.log(`[v] Connected to MongoDB (${environment} environment)`);
 
-        // Routes
-        app.use('/api/leads', require('./routes/leadsRoutes'));
-
-        // Start server
-        const PORT = process.env.PORT || 3000;
         app.listen(PORT, () =>
-            console.log(`Server is running at ${process.env.BASE_URL || ''}:${PORT}`)
+            console.log(`Server is running at ${process.env.BASE_URL}`)
         );
     })
     .catch((error) => {
