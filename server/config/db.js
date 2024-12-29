@@ -4,7 +4,9 @@ require('dotenv').config();
 const mode = process.env.NODE_ENV || 'development';
 
 let uri;
-if (mode === 'prod') {
+
+// בודק את מצב הסביבה ומגדיר את ה-URI המתאים
+if (mode === 'production') {
     uri = process.env.MONGODB_URI_PROD;
     console.log('Running in production mode');
 } else if (mode === 'atlas') {
@@ -15,17 +17,21 @@ if (mode === 'prod') {
     console.log('Running in development mode');
 }
 
-console.log('Environment Mode:', mode); // בדקי איזה מצב מוגדר
-console.log('MongoDB URI:', uri);       // הדפיסי את ה-URI שנבחר
-
+// הדפסת המצב הנוכחי של הסביבה וה-URI שנבחר
+console.log('Environment Mode:', mode);
+console.log('MongoDB URI:', uri);
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(uri);
+        // ניסיון להתחבר ל- MongoDB
+        await mongoose.connect(uri, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
         console.log('Successfully connected to MongoDB');
     } catch (err) {
-        console.log('Error connecting to MongoDB:', err.message);
-        process.exit(1);
+        console.error('Error connecting to MongoDB:', err.message);
+        process.exit(1); // סיום התהליך במידה ויש שגיאה
     }
 };
 
