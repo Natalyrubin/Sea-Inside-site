@@ -12,17 +12,21 @@ const app = express();
 app.use(express.json());
 app.use(morgan('dev'));
 
+// CORS Middleware
 app.use(
     cors({
         origin: [
             'https://www.sea-inside.co.il',
             'https://sea-inside.co.il',
-            'https://sea-inside.co.il/api/leads',
         ],
-        methods: ['GET', 'POST', 'PUT'],
+        methods: ['GET', 'POST', 'PUT', 'OPTIONS'],
         allowedHeaders: ['Content-Type', 'Authorization'],
+        credentials: true, // Allow credentials if necessary
     })
 );
+
+// Handle Preflight Requests
+app.options('*', cors());
 
 // Connect to MongoDB
 const environment = process.env.NODE_ENV || 'development';
