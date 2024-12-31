@@ -31,7 +31,7 @@ app.use('/api/leads', require('./routes/leadsRoutes'));
 
 
 // Connect to MongoDB
-const environment = process.env.NODE_ENV || 'development';
+const environment = process.env.NODE_ENV || 'production';
 const mongoURI =
     environment === 'production'
         ? process.env.MONGODB_URI_PROD
@@ -43,7 +43,9 @@ if (!mongoURI) {
 }
 
 // Start server
-const PORT = process.env;
+const PORT = process.env.PORT || 3000;
+
+
 
 
 connectDB(mongoURI)
@@ -51,7 +53,7 @@ connectDB(mongoURI)
         console.log(`[v] Connected to MongoDB (${environment} environment)`);
 
         app.listen(PORT, () =>
-            console.log(`Server is running at ${process.env.BASE_URL}`)
+            app.listen(PORT, () => console.log(`Server is running at ${process.env.BASE_URL}:${PORT}`))
         );
     })
     .catch((error) => {
