@@ -29,7 +29,7 @@ export default function ContactForm() {
     e.preventDefault();
     console.log(formData);  // הדפס את הערכים לפני שליחה
     try {
-      const response = await fetch("https://sea-inside.co.il/api/leads", {
+      const response = await fetch("https://www.sea-inside.co.il/api/leads", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
