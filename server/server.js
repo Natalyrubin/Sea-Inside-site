@@ -4,6 +4,7 @@ const express = require('express');
 const connectDB = require('./config/db');
 const morgan = require('morgan');
 const cors = require('cors');
+console.log('Environment:', process.env.NODE_ENV);
 
 // Initialize express
 const app = express();
@@ -17,12 +18,13 @@ app.use(
         origin: [
             'https://www.sea-inside.co.il',
             'https://sea-inside.co.il',
-            'https://sea-inside.co.il/api/leads',
         ],
-        methods: ['GET', 'POST', 'PUT'],
+        methods: ['GET', 'POST', 'PUT', 'OPTIONS'], // הוסף OPTIONS
         allowedHeaders: ['Content-Type', 'Authorization'],
+        credentials: true, // תמיכה באימות אם נדרש
     })
 );
+
 
 // Routes
 app.use('/api/leads', require('./routes/leadsRoutes'));
