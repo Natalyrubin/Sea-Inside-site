@@ -23,6 +23,13 @@
             "dest": "/client/$1"
         }
     ],
+    "redirects": [
+        {
+            "source": "https://sea-inside.co.il/:path*",
+            "destination": "https://www.sea-inside.co.il/:path*",
+            "permanent": true
+        }
+    ],
     "env": {
         "NODE_ENV": "production",
         "BASE_URL": "https://sea-inside.co.il",
