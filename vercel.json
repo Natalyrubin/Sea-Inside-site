@@ -30,14 +30,6 @@
             "permanent": true
         }
     ],
-    "env": {
-        "NODE_ENV": "production",
-        "BASE_URL": "https://www.sea-inside.co.il",
-        "MONGODB_URI_PROD": "mongodb+srv://natirubrub:8FDhOg68YTKkf4uD@seainsidedb.gphps.mongodb.net/sea_inside_prod?retryWrites=true&w=majority&appName=SeaInsideDB",
-        "MONGODB_URI_DEV": "mongodb+srv://natirubrub:8FDhOg68YTKkf4uD@seainsidedb.gphps.mongodb.net/sea_inside_dev?retryWrites=true&w=majority&appName=SeaInsideDB",
-        "EMAIL_USER": "natirubrub@gmail.com",
-        "EMAIL_PASS": "jrnjvatyclujtaka"
-    },
     "functions": {
         "api/*.js": {
             "maxDuration": 10
