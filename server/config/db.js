@@ -5,7 +5,7 @@ const mode = process.env.NODE_ENV || 'development';
 
 let uri;
 if (mode === 'production') {
-    uri = process.env.MONGODB_URI_PROD;
+    uri = process.env.MONGODB_URI;
     console.log('Running in production mode');
 } else if (mode === 'atlas') {
     uri = process.env.MONGODB_URI_ATLAS;
