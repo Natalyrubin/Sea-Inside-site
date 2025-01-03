@@ -34,7 +34,7 @@ app.use('/api/leads', require('./routes/leadsRoutes'));
 const environment = process.env.NODE_ENV;
 const mongoURI =
     environment === 'production'
-        ? process.env.MONGODB_URI_PROD
+        ? process.env.MONGODB_URI
         : process.env.MONGODB_URI_DEV;
 
 if (!mongoURI) {
