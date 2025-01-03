@@ -19,9 +19,9 @@ console.log('Environment Mode:', mode); // בדקי איזה מצב מוגדר
 console.log('MongoDB URI:', uri);       // הדפיסי את ה-URI שנבחר
 
 
-const connectDB = async (uri2) => {
+const connectDB = async () => {
     try {
-        await mongoose.connect(uri2);
+        await mongoose.connect(uri);
         console.log('Successfully connected to MongoDB');
     } catch (err) {
         console.log('Error connecting to MongoDB:', err.message);
