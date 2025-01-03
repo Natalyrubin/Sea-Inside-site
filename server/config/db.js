@@ -4,7 +4,7 @@ require('dotenv').config();
 const mode = process.env.NODE_ENV || 'development';
 
 let uri;
-if (mode === 'prod') {
+if (mode === 'production') {
     uri = process.env.MONGODB_URI_PROD;
     console.log('Running in production mode');
 } else if (mode === 'atlas') {
