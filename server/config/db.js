@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const mode = process.env.NODE_ENV || 'production'; // development
+const mode = process.env.NODE_ENV || 'development'; // development
 console.log(`The mode is: ${mode}`);
 
 
