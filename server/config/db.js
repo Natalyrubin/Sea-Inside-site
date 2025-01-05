@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const mode = process.env.NODE_ENV || 'production';
+const mode = process.env.NODE_ENV || 'production'; // development
 console.log(`The mode is: ${mode}`);
 
 
@@ -21,12 +21,16 @@ console.log('Environment Mode:', mode); // בדקי איזה מצב מוגדר
 console.log('MongoDB URI:', uri);       // הדפיסי את ה-URI שנבחר
 
 
+const clientOptions = {
+    serverApi: { version: "1", strict: true, deprecationErrors: true },
+};
+
 const connectDB = async () => {
     try {
-        await mongoose.connect(uri);
-        console.log('Successfully connected to MongoDB');
+        await mongoose.connect(uri, clientOptions);
+        console.log("Successfully connected to MongoDB");
     } catch (err) {
-        console.log('Error connecting to MongoDB:', err.message);
+        console.log("Error connecting to MongoDB", err.message);
         process.exit(1);
     }
 };
