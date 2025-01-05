@@ -1,4 +1,3 @@
-// seed.js
 const connectDB = require('./config/db');
 const { leads } = require('./data/data');
 const Lead = require('./models/Lead');
@@ -14,12 +13,16 @@ const seedAll = async () => {
         console.log('[v] Completed successfully');
         process.exit(0);
     } catch (e) {
-        console.error('[x] Seeding error');
-        console.error(e.message);
+        console.log('[x] Seeding error');
+        console.log(e.message);
         process.exit(1);
     }
 };
 
-const mongoURI = process.env.MONGODB_URI;
+const environment = process.env.NODE_ENV || 'development';
+const mongoURI =
+    environment === 'production'
+        ? process.env.MONGODB_URI_PROD
+        : process.env.MONGODB_URI_DEV;
 
 connectDB(mongoURI).then(() => seedAll());

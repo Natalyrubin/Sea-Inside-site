@@ -1,20 +1,30 @@
-// db.js
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const uri = process.env.MONGODB_URI;
+const mode = process.env.NODE_ENV || 'development';
 
-if (!uri) {
-    console.error('MongoDB URI is not defined. Check your environment variables.');
-    process.exit(1);
+let uri;
+if (mode === 'production') {
+    uri = process.env.MONGODB_URI;
+    console.log('Running in production mode');
+} else if (mode === 'atlas') {
+    uri = process.env.MONGODB_URI_ATLAS;
+    console.log('Running in Atlas mode');
+} else {
+    uri = process.env.MONGODB_URI_DEV;
+    console.log('Running in development mode');
 }
+
+console.log('Environment Mode:', mode); // בדקי איזה מצב מוגדר
+console.log('MongoDB URI:', uri);       // הדפיסי את ה-URI שנבחר
+
 
 const connectDB = async () => {
     try {
         await mongoose.connect(uri);
-        console.log('[v] Successfully connected to MongoDB');
+        console.log('Successfully connected to MongoDB');
     } catch (err) {
-        console.error('[x] Error connecting to MongoDB:', err.message);
+        console.log('Error connecting to MongoDB:', err.message);
         process.exit(1);
     }
 };
