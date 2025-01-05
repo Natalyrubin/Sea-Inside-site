@@ -22,12 +22,5 @@
             "src": "/(.*)",
             "dest": "/client/$1"
         }
-    ],
-    "redirects": [
-        {
-            "source": "https://sea-inside.co.il/:path*",
-            "destination": "https://www.sea-inside.co.il/:path*",
-            "permanent": true
-        }
     ]
 }
