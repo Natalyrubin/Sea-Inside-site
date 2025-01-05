@@ -41,7 +41,7 @@ const PORT = process.env.PORT || 3000;
 
 connectDB(mongoURI)
     .then(() => {
-        console.log(`[v] Connected to MongoDB (${process.env.NODE_ENV} environment)`);
+        console.log(`[v] Connected to MongoDB (${process.env.NODE_ENV} environment), ${mongoURI}`);
 
         app.listen(PORT, () =>
             console.log(`Server is running at ${process.env.BASE_URL}:${PORT}`)
