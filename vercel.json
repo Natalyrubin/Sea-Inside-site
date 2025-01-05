@@ -29,10 +29,5 @@
             "destination": "https://www.sea-inside.co.il/:path*",
             "permanent": true
         }
-    ],
-    "functions": {
-        "api/*.js": {
-            "maxDuration": 10
-        }
-    }
+    ]
 }
