@@ -2,10 +2,15 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url("/public/assets/img/surfing.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+    .TopPage {
+        background-image: url("/public/assets/img/surfing.jpg");
+    }
 }
 
 @media (max-width: 768px) {
