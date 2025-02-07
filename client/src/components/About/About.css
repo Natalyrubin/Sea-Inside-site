@@ -1,6 +1,6 @@
 /* רקע סטטי */
 .StaticBackground {
-    background-image: url("/public/assets/img/cover-photo.png");
+    background-image: url("/public/assets/img/debby_surfing.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
