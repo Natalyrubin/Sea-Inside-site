@@ -9,8 +9,21 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Default />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="*" element={<NotFoundPage />} /> {/* עמוד 404 ברירת מחדל */}
-      </Routes>
-    </Router>
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes >
+    </Router >
   );
 }
+
+
+
+/* import './App.css'
+import Default from './layouts/Default/Default'
+
+export default function App() {
+  return (
+    <div className='App'>
+      <Default />
+    </div>
+  )
+} */
