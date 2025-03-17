@@ -23,6 +23,8 @@ export default function Default() {
       <FloatingWhatsApp />
       <TopPage />
       <IconSection />
+      <UpcomingDate />
+      <ContactForm />
       <ContentOne />
       <ContentTwo />
       <About />
