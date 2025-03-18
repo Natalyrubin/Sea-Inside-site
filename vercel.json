@@ -16,15 +16,11 @@
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "/server/server.js"
+            "dest": "/server"
         },
         {
             "src": "/(.*)",
-            "dest": "/client/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/index.html"
+            "dest": "/client/dist/index.html"
         }
     ]
 }

@@ -10,10 +10,11 @@ export default function App() {
         <Route path="/" element={<Default />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<NotFoundPage />} />
-      </Routes >
-    </Router >
+      </Routes>
+    </Router>
   );
 }
+
 
 
 
