@@ -105,6 +105,10 @@ button:hover {
         margin-bottom: 10px;
     }
 
+    #buttomForm a {
+        display: inline;
+    }
+
     button {
         width: 100%;
         margin-top: 10px;
