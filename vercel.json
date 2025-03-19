@@ -19,6 +19,10 @@
             "dest": "/server/server.js"
         },
         {
+            "src": "/(.*)\\.(js|css|png|jpg|jpeg|svg|gif|ico|woff2|woff|ttf|otf|eot|ttf|map)",
+            "dest": "/client/$1.$2"
+        },
+        {
             "src": "/(.*)",
             "dest": "/client/index.html",
             "status": 200
