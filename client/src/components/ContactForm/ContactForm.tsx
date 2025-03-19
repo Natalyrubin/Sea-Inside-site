@@ -1,6 +1,7 @@
 import "./ContactForm.css";
 import React, { useState } from "react";
 import { ILeadSignup } from "../../interfaces/LeadInterfaces";
+import { Link } from "react-router-dom";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<ILeadSignup>({
@@ -95,10 +96,10 @@ export default function ContactForm() {
                   checked={formData.newsletterConsent}
                   onChange={handleChange}
                 />
-                הנני מאשר/ת קבלת מידע, הצעות שיווקיות ו/או דברי פרסומת מ- Sea-Inside
-                <a href="/privacy-policy" style={{ color: "blue", textDecoration: "underline" }}>
+                הנני מאשר/ת קבלת מידע, הצעות שיווקיות ו/או דברי פרסומת מ- Sea-Inside{" "}
+                <Link to="/privacy-policy" style={{ color: "blue", textDecoration: "underline" }}>
                   למדיניות הפרטיות
-                </a>
+                </Link>.
               </label>
               <button type="submit">שליחה</button>
             </div>
