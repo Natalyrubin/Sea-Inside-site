@@ -25,6 +25,11 @@
         {
             "src": "/(.*)",
             "dest": "/index.html"
+        },
+        {
+            "src": "/privacy-policy",
+            "dest": "/index.html",
+            "status": 200
         }
     ]
 }
