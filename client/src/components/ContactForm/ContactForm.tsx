@@ -96,6 +96,9 @@ export default function ContactForm() {
                   onChange={handleChange}
                 />
                 הנני מאשר/ת קבלת מידע, הצעות שיווקיות ו/או דברי פרסומת מ- Sea-Inside
+                <a href="/privacy-policy" style={{ color: "blue", textDecoration: "underline" }}>
+                  למדיניות הפרטיות
+                </a>
               </label>
               <button type="submit">שליחה</button>
             </div>
