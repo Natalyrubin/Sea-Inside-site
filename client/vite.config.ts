@@ -8,4 +8,6 @@ export default defineConfig({
       '@': '/src', // רק אם אתה משתמש בקיצור נתיבים
     },
   },
+  base: '/',
+
 });
