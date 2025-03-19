@@ -20,15 +20,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/client/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/index.html"
-        },
-        {
-            "src": "/privacy-policy",
-            "dest": "/index.html",
+            "dest": "/client/index.html",
             "status": 200
         }
     ]
