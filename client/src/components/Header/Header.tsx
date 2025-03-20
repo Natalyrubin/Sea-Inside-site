@@ -58,7 +58,7 @@ export default function Header() {
           </ul>
           <div className="menu-divider"></div>
           <div className="social-icons">
-            <a href="https://www.facebook.com/RubinSuccess" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/SeaInside.SurfNLP" target="_blank" rel="noopener noreferrer">
               <img decoding="async" src="/assets/img/facebook.png" alt="facebook Logo" />
             </a>
             <a href="https://www.instagram.com/nataly_rubin_/" target="_blank" rel="noopener noreferrer">

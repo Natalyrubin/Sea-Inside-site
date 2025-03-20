@@ -5,7 +5,7 @@ export default function Footer() {
     <div className="Footer">
       <div className="footer-content">
         <div className="footer-text">
-          <a href="https://www.facebook.com/RubinSuccess"
+          <a href="https://www.facebook.com/SeaInside.SurfNLP"
             target="_blank"
             rel="noopener noreferrer" >
             <img
